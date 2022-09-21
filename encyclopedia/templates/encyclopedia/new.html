@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New Page
+{% endblock %}
+
+{% block body %}
+    <h2 class="mb-4">Create a New Page</h2>
+    <form action="{% url 'new' %}" method="post">
+        <input class="form-control mb-3 w-25" placeholder="Title" type="text" name="title"></input>
+        <textarea class="form-control mb-3 w-50" placeholder="Content" rows="8" col="50" name="content"></textarea>
+        <button class="btn btn-primary mb-3" type="submit">Save</button>
+    </form>
+{% endblock %}
